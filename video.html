@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
+    <script src="jQuery 3.3.1.js"></script>
+    <style>
+      #fram1 {
+        display: none;
+      }
+      #form {
+        display: none;
+      }
+      #cen {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        display: none;
+      }
+      #fr1 {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      #fr2 {
+        border: none;
+      }
+      #text {
+        font-size: 30px;
+        color: red;
+        font-family: cursive;
+        font-style: bold;
+      }
+    </style>
+    <script>
+      $(document).ready(function() {
+        setTimeout(function(){
+          $("#fr1").hide();
+          $("#cen").show();
+          $("#fr2").hide();
+          $("#form").hide();
+          $("#text").hide();
+          $(num2(0));
+        }, 3000);
+        $("#sub").click(function() {
+          $("#text").hide();
+          $("#fr2").show();
+        });
+      });
+      function num2(i) {
+        var w = $(document).width();
+        w = w * 0.4;
+        var kol = w / 8;
+        $(".img").width(kol);
+        var r = 45;
+        var set1 = setInterval(function(){
+          var w0 = $(".img").width();
+          $(".img").css("transform", "rotate(" + r + "deg)");
+          w0 += kol;
+          r+=45;
+          $(".img").width(w0);
+          if(w0 > w) {
+            clearInterval(set1);
+            if(i == 1) {
+              $(".img").css("transform", "rotate(0deg)");
+              setTimeout(function(){
+                $(".img").hide();
+                $("#text").show();
+                setTimeout(function(){
+                  $("#form").show();
+                }, 2000);
+              }, 1000);
+            } else {
+              $(".img").css("transform", "rotate(0deg)");
+              setTimeout(function(){
+                $("#img1").attr("src", "img1.jpg");
+              $("#img2").attr("src", "img2.jpg");
+              i++;
+              $(num2(i));
+              }, 1000);
+            }
+          }
+        }, 500);
+      }
+    </script>
+  </head>
+  <body>
+    <iframe src="pr.html" id="fr1"></iframe>
+    <div id="cen">
+      <span id="text">Привет, Оля!<br/>С Новым Годом!!!<br/>Ты прекрасна!!!</span>
+      <img width="50px" class="img" src="fon.jpg"/>
+      <img width="50px" class="img" src="fon.jpg"/>
+      <iframe src="" id="fr2"></iframe>
+    <iframe name="frame" style="display:none"></iframe>
+      <form id="form" id="form" action="server.hostronavt.ru/form.php" method="post" target="frame">
+        <input type="text" name="text"/>
+        <input id="sub" type="submit"/>
+      </form>
+    </div>
+  </body>
+</html>
