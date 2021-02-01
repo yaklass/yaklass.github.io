@@ -9,7 +9,7 @@
 			</head>
 
 	<body>
-		<div class="bg">
+		
 		<div id="tit">
 			<h1>ГОСУДАРСТВЕННАЯ</h1>
 			<h1>ДУМА</h1>
@@ -85,8 +85,26 @@
 		</div>
 
 
-	</div>
-	<script src="js.js"></script>
+	
+	<script>
+		$(document).ready(function() {    
+    $("body").css("opacity", "1");
+  });
+$('#ST').click(function() {		
+		$('.content').fadeOut('fast')
+		setTimeout(function(){
+			$('#Structure').fadeIn('fast')
+		},250)
+})
+$('#Poln').click(function() {		
+		$('.content').fadeOut('fast')
+		setTimeout(function(){
+			$('#Polnomochia').fadeIn('fast')
+		},250)
+})
+
+
+	</script>
 
 	</body>
 </html>

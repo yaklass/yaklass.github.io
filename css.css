@@ -16,23 +16,18 @@ body {
   width: 0;
 }
 
-.bg{
-	background-color: rgba(0, 0, 0, 0.5);
-	min-height: 100vh;
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
+
 h1{
 	text-align: center;
 	text-decoration: underline;
 	font-size: 50px;
 	color: #E1E1E1;
 	font-family: 'Varela Round';
-
+	margin-top: 30px;
 }
 .nav{
 	text-align: center;
-	/*margin-left: 20px;*/
+	
 	margin-top: 20px;
 }
 
