@@ -4,7 +4,7 @@
 }
 
 body {
-	
+	min-height: 130vh;
 	background: url(Background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -113,7 +113,7 @@ h1{
 }
 table {
 font-family: Sans-Serif;
-
+margin-bottom: 80px;
 border-collapse: collapse;
 text-align: center;
 display: inline-block;
@@ -129,6 +129,7 @@ width: 350px;}
 
 #Polnomochia td{
 	width: 600px;
+        font-size: 25px;
 }
 #Structure table{
 	font-size: 25px;
