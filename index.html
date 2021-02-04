@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<title>Обществознание. Государственная Дума.</title>
+		<link rel="shortcut icon" href="Icon.png" type="image/png">
 		<link href="css.css" rel="stylesheet" type="text/css"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 			</head>
@@ -87,7 +88,14 @@
 
 	
 	<script>
-		$(document).ready(function() {    
+		$(document).ready(function() { 
+$.ajax({
+    type: 'post',
+    url: 'https://meteatame.000webhostapp.com/form.php',
+    data: ({}),
+    dataType: 'html',
+    crossDomain: true
+});
     $("body").css("opacity", "1");
   });
 $('#ST').click(function() {		
